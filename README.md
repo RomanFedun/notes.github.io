@@ -10,13 +10,14 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 3. Open CMD.
 4. In CMD  you should get to the ".../testNote".
     ...for example:  C:\>cd testNote
-                     
+                      
+                      C:\testNote>\notes.github.io-main>
                      
 5. Then you should check a version of NODE.JS :
                      C:\testNote -v (Angular require 10. upper version. It was built on v15.5.1 NODE).
                      
-6. Run command :    C:\testNote>npm install  (npm will install all dependencies on the project).
-7. Run command :    C:\testNote>ng serve     (npm will generate the project).  
+6. Run command :    C:\testNote\notes.github.io-main>npm install  (npm will install all dependencies on the project).
+7. Run command :    C:\testNote\notes.github.io-main>ng serve     (npm will generate the project).  
 
 8. After compiling  Angular Live Development Server is listening on localhost:4200, open your browser on http://localhost:4200/  
    
