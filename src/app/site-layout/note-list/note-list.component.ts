@@ -19,10 +19,14 @@ export class NoteListComponent implements OnInit, DoCheck, AfterViewInit {
   constructor(public modal: NgbModal,
               public noteServe: NoteService,
               public siteLayout: SiteLayoutComponent) {
-    this.localStr = JSON.parse(localStorage.id);
-    // tslint:disable-next-line:forin
-    for (const prop in this.localStr) {
-      this.list[prop] = this.localStr[prop];
+    if (localStorage.id) {
+      this.localStr = JSON.parse(localStorage.id);
+      // tslint:disable-next-line:forin
+      for (const prop in this.localStr) {
+        this.list[prop] = this.localStr[prop];
+      }
+    } else {
+      return;
     }
   }
 
