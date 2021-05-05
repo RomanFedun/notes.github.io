@@ -20,7 +20,6 @@ export class NoteService {
 
   convertInObj(): any {
     this.noteObj = this.noteList.reduce(this.reducer, this.noteObj);
-    console.log('object for local: ', this.noteObj);
     localStorage.id = JSON.stringify(this.noteObj);
   }
 
