@@ -1,0 +1,14 @@
+<main>
+  <h3>
+    Create your note
+  </h3>
+
+  <textarea  rows="4" cols="50"
+             #myInput
+             (input)="onInput($event)">
+  </textarea>
+  <button class="btn btn-dark"
+          (click)="showToast('note was created')"
+          [disabled]="!inp"> add note
+  </button>
+</main>

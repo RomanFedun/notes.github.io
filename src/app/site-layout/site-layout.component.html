@@ -1,0 +1,23 @@
+<header class="bg-secondary">
+  <h3>
+    <a routerLink='/note'
+       class="text-decoration-none
+        table-active"> List of notes
+    </a>
+  </h3>
+
+  <h5 class="text-end">
+    <a routerLink='/create'
+       class="text-decoration-none
+        table-active"> Create
+    </a>
+  </h5>
+</header>
+
+<div class="toast">
+  <div class="toast-body
+   text-center"> {{text}}
+  </div>
+</div>
+
+<router-outlet></router-outlet>

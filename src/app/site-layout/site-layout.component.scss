@@ -1,0 +1,19 @@
+header{
+  width: 96%;
+  height: 10%;
+  margin: 2% auto;
+  padding: 3px;
+  display: flex;
+  justify-content: space-between;
+}
+
+h3, h5 {
+  display: inline;
+  margin: auto 2% auto 2%;
+  color: lightgrey;
+}
+
+.toast {
+  position: absolute;
+  margin-left: 2%;
+}

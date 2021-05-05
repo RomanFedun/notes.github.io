@@ -1,0 +1,64 @@
+<main>
+  <div *ngIf="list.length; else empty">
+    <article
+      *ngFor="let note of list; index as i"
+      class="align-content-center
+       text-center">
+      <p>
+        {{note}}
+      </p>
+      <div>
+        <button type="button"
+                class="btn-dark bg-danger"
+                (click)="open('delete',i)"> Delete {{i + 1}}
+        </button>
+
+        <button type="button"
+                class="btn-dark bg-secondary"
+                (click)="addId(i)"
+                [routerLink]="['/edit',(i+1)]"> Edit note
+        </button>
+
+      </div>
+    </article>
+  </div>
+
+  <ng-template #empty>
+    <p
+      class="text-center
+       text-danger"> There is no notes... Try to create.
+    </p>
+  </ng-template>
+
+  <!-- Modal -->
+  <ng-template #exampleModal>
+
+    <div class="modal-header">
+      <h4 class="modal-title"
+          id="modal-basic-title"> Confirm your action
+      </h4>
+      <button type="button"
+              class="close"
+              aria-label="Close"
+              (click)="modal.dismissAll()"> <span aria-hidden="true">×</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      {{text}}
+    </div>
+    <div class="modal-footer">
+      <button type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+              (click)="modal.dismissAll()"> Cancel
+      </button>
+
+      <button type="button"
+              class="btn btn-primary"
+              (click)="method()"> {{text}}
+      </button>
+    </div>
+  </ng-template>
+</main>
+
+<router-outlet></router-outlet>
